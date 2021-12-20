@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<testsuite name="TestCalculator-20211220020455" tests="4" time="0.000" failures="0" errors="0">
+	<testcase classname="TestCalculator" name="test_divide" time="0.000"/>
+	<testcase classname="TestCalculator" name="test_minus" time="0.000"/>
+	<testcase classname="TestCalculator" name="test_multiply" time="0.000"/>
+	<testcase classname="TestCalculator" name="test_plus" time="0.000"/>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>
