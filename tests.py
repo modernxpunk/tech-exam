@@ -1,53 +1,23 @@
 import unittest
-from random import randint
-from queue import Queue, Node
+from main import Main
 
-class TestQueue(unittest.TestCase):
+class TestMain(unittest.TestCase):
 	def setUp(self):
-		self.queue = Queue()
-		self.testq = []
-		self.n = randint(10, 20)
+		self.a = 10
+		self.b = 2
+		self.calc = Main(self.a, self.b)
 
-	def test_enqueue(self):
-		for i in range(self.n):
-			self.queue.enqueue(i)
-			self.testq += [i]
-		self.assertEqual(self.queue.show(), self.testq)
+	def test_plus(self):
+		self.assertEqual(self.calc.plus(), self.a + self.b)
 
-	def test_dequeue(self):
-		for i in range(self.n):
-			self.queue.enqueue(i)
-			self.testq += [i]
-		for i in range(self.n // 2):
-			self.queue.pop()
-			self.testq.pop()
-		self.assertEqual(self.queue.show(), self.testq)
+	def test_minus(self):
+		self.assertEqual(self.calc.minus(), self.a - self.b)
 
-	def test_isEmpty(self):
-		self.assertEqual(self.queue.isEmpty(), True)
+	def test_multiply(self):
+		self.assertEqual(self.calc.multiply(), self.a * self.b)
 
-	def test_isNotEmpty(self):
-		self.queue.enqueue(1)
-		self.assertEqual(self.queue.isEmpty(), False)
-
-	def test_size(self):
-		for i in range(self.n):
-			self.queue.enqueue(i)
-		self.assertEqual(self.queue.size(), self.n)
-
-	def test_front(self):
-		randomNumber = randint(123, 12345)
-		for i in range(self.n):
-			self.queue.enqueue(i)
-		self.queue.enqueue(randomNumber)
-		self.assertEqual(self.queue.front(), randomNumber)
-
-	def test_back(self):
-		randomNumber = randint(123, 12345)
-		self.queue.enqueue(randomNumber)
-		for i in range(self.n):
-			self.queue.enqueue(i)
-		self.assertEqual(self.queue.back(), randomNumber)
+	def test_divide(self):
+		self.assertEqual(self.calc.divide(), self.a // self.b)
 
 if __name__ == '__main__':
 	import xmlrunner
