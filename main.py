@@ -1,15 +1,15 @@
-class Main:
-	def __init__(self, a, b):
-		self.a = a
-		self.b = b
-	def plus(self):
-		return self.a + self.b
+# 0 1 1 2 3 5 8 13 ...
+def fib(n):
+	if n < 0:
+		return None
+	elif n == 0:
+		return 0
+	elif n == 1:
+		return 1
+	else:
+		return fib(n - 1) + fib(n - 2)
 
-	def minus(self):
-		return self.a - self.b
-
-	def multiply(self):
-		return self.a * self.b
-		
-	def divide(self):
-		return self.a // self.b
+ans = []
+for i in range(-3, 10):
+	ans.append(fib(i))
+print(ans)
