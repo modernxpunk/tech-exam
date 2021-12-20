@@ -39,5 +39,10 @@ pipeline {
                 }
             }
         }
+        stage("deploy") {
+            steps {
+                sh "python3 main.py"
+            }
+        }
     }
 }

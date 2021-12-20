@@ -9,7 +9,4 @@ def fib(n):
 	else:
 		return fib(n - 1) + fib(n - 2)
 
-ans = []
-for i in range(-3, 10):
-	ans.append(fib(i))
-print(ans)
+print([fib(i) for i in range(-3, 10)])
