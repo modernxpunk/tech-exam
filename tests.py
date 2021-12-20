@@ -12,7 +12,7 @@ class TestMain(unittest.TestCase):
 		self.assertEqual(fib(5), 5)
 
 	def test_fibAllCases(self):
-		self.assertEqual(ans, [fib(i) for i in range(-3, 10)])
+		self.assertEqual([fib(i) for i in range(-3, 10)], [None, None, None, 0, 1, 1, 2, 3, 5, 8, 13, 21, 34])
 
 if __name__ == '__main__':
 	import xmlrunner
